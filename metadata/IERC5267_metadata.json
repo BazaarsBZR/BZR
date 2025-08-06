@@ -1,0 +1,9 @@
+{
+  "name": "IERC5267",
+  "standard": "ERC-5267",
+  "description": "Standard interface for on-chain metadata introspection",
+  "license": "MIT",
+  "author": "Bazaars",
+  "source": "https://github.com/BazaarsBZR",
+  "abiHash": "0xEXAMPLEHASHHERE"  // Optional placeholder
+}
