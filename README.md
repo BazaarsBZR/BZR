@@ -1,31 +1,37 @@
-Bazaars (BZR) – ORC-55 Token Standard
-Bazaars (BZR) is the first implementation of the ORC-55 standard — a new protocol for immutable, zero-admin, multi-chain compatible digital assets. Built with OpenZeppelin security foundations and hardened for production at scale, BZR defines the next evolution of decentralized ERC-20 tokens.
 
-🔒 Key Features
-✅ ORC-55 Compliant: Zero-Admin, Race-Conditionless, Contractually Final
-✅ Immutable: No upgrade proxy, no ownership, no backdoors
-✅ ERC-5267 Metadata: On-chain introspection support for wallets and explorers
-✅ Reentrancy Guard: Built-in security for all sensitive calls
-✅ Gas Optimized: Lightweight and minimal-cost logic
-✅ Burnable: Supply-reducing with fully transparent audit trails
-✅ Multi-Chain Deployed: Live on 12+ EVM-compatible chains
+---
 
-🚀 Deployment Footprint
+## ✅ Testing
 
-📂 Structure
-bash
-CopyEdit
-/contracts        → Solidity source files (BZR.sol)
-/scripts          → Deployment and utility scripts (optional)
-/docs             → Whitepaper, audits, and technical specs
-/test             → Unit tests (optional)
-/README.md        → Project overview and documentation
-/LICENSE          → MIT License
+Tested manually using **Remix IDE** with detailed logs in  
+[`test/BZR_Remix_Test.js`](./test/BZR_Remix_Test.js).
 
-📜 License
-This project is licensed under the MIT License.
+All core functions including transfers, burns, allowance protections, and metadata access have been validated.
 
-✉️ Contact
-📧 security@bazaars.io
-🌐 https://bazaars.io
-🧠 GitHub: github.com/BazaarsBZR
+---
+
+## 🧾 Token Submissions
+
+**Metamask / Trust Wallet / TokenLists:**
+
+All metadata is prepared in the following folders:
+
+- `tokenlists/tokenlist.json` – TokenList format for dApps
+- `metadata/BZR.json` – ABI & contract info
+- `registry/sha256.txt` – Contract ABI hash
+- `registry/registry.json` – ABI registry for introspection
+- `assets/` – Token logo (PNG)
+
+---
+
+## 🌐 Useful Links
+
+- 🌍 [Website](https://bazaars.io)
+- 📦 [GitHub](https://github.com/BazaarsBZR)
+- 📜 [Docs](https://github.com/BazaarsBZR/BZR/tree/main/docs)
+- ✉️ [Security Contact](mailto:security@bazaars.io)
+
+---
+
+> This is a fully immutable, decentralized token with no upgrade or admin keys.  
+> Designed to stand the test of time.
