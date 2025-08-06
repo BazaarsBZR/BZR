@@ -1,8 +1,8 @@
-Bazaars (BZR) – 0RC-55 Token Standard
-Bazaars (BZR) is the first implementation of the 0RC-55 standard — a new protocol for immutable, zero-admin, multi-chain compatible digital assets. Built with OpenZeppelin security foundations and hardened for production at scale, BZR defines the next evolution of decentralized ERC-20 tokens.
+Bazaars (BZR) – ORC-55 Token Standard
+Bazaars (BZR) is the first implementation of the ORC-55 standard — a new protocol for immutable, zero-admin, multi-chain compatible digital assets. Built with OpenZeppelin security foundations and hardened for production at scale, BZR defines the next evolution of decentralized ERC-20 tokens.
 
 🔒 Key Features
-✅ 0RC-55 Compliant: Zero-Admin, Race-Conditionless, Contractually Final
+✅ ORC-55 Compliant: Zero-Admin, Race-Conditionless, Contractually Final
 ✅ Immutable: No upgrade proxy, no ownership, no backdoors
 ✅ ERC-5267 Metadata: On-chain introspection support for wallets and explorers
 ✅ Reentrancy Guard: Built-in security for all sensitive calls
