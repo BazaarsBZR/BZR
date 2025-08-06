@@ -1,1 +1,12 @@
-
+{
+  "Ethereum": "deployments/ethereum.json",
+  "BNB Chain": "deployments/bnb.json",
+  "Polygon": "deployments/polygon.json",
+  "Base": "deployments/base.json",
+  "Arbitrum": "deployments/arbitrum.json",
+  "Optimism": "deployments/optimism.json",
+  "Avalanche": "deployments/avalanche.json",
+  "Linea": "deployments/linea.json",
+  "Scroll": "deployments/scroll.json",
+  "Mantle": "deployments/mantle.json"
+}
