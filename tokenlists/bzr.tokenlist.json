@@ -1,1 +1,109 @@
-
+{
+  "name": "Bazaars Token List",
+  "timestamp": "2024-01-01T00:00:00.000Z",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "tags": {},
+  "logoURI": "https://raw.githubusercontent.com/BazaarsBZR/BZR-token/main/logos/bzr-logo.png",
+  "keywords": [
+    "bazaars",
+    "bzr",
+    "defi",
+    "orc-55"
+  ],
+  "tokens": [
+    {
+      "chainId": 1,
+      "address": "0x0000000000000000000000000000000000000000",
+      "name": "Bazaars",
+      "symbol": "BZR",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/BazaarsBZR/BZR-token/main/logos/bzr-logo.png",
+      "tags": ["defi", "governance"]
+    },
+    {
+      "chainId": 56,
+      "address": "0x0000000000000000000000000000000000000000",
+      "name": "Bazaars",
+      "symbol": "BZR",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/BazaarsBZR/BZR-token/main/logos/bzr-logo.png",
+      "tags": ["defi", "governance"]
+    },
+    {
+      "chainId": 137,
+      "address": "0x0000000000000000000000000000000000000000",
+      "name": "Bazaars",
+      "symbol": "BZR",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/BazaarsBZR/BZR-token/main/logos/bzr-logo.png",
+      "tags": ["defi", "governance"]
+    },
+    {
+      "chainId": 42161,
+      "address": "0x0000000000000000000000000000000000000000",
+      "name": "Bazaars",
+      "symbol": "BZR",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/BazaarsBZR/BZR-token/main/logos/bzr-logo.png",
+      "tags": ["defi", "governance"]
+    },
+    {
+      "chainId": 10,
+      "address": "0x0000000000000000000000000000000000000000",
+      "name": "Bazaars",
+      "symbol": "BZR",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/BazaarsBZR/BZR-token/main/logos/bzr-logo.png",
+      "tags": ["defi", "governance"]
+    },
+    {
+      "chainId": 43114,
+      "address": "0x0000000000000000000000000000000000000000",
+      "name": "Bazaars",
+      "symbol": "BZR",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/BazaarsBZR/BZR-token/main/logos/bzr-logo.png",
+      "tags": ["defi", "governance"]
+    },
+    {
+      "chainId": 8453,
+      "address": "0x0000000000000000000000000000000000000000",
+      "name": "Bazaars",
+      "symbol": "BZR",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/BazaarsBZR/BZR-token/main/logos/bzr-logo.png",
+      "tags": ["defi", "governance"]
+    },
+    {
+      "chainId": 5000,
+      "address": "0x0000000000000000000000000000000000000000",
+      "name": "Bazaars",
+      "symbol": "BZR",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/BazaarsBZR/BZR-token/main/logos/bzr-logo.png",
+      "tags": ["defi", "governance"]
+    },
+    {
+      "chainId": 324,
+      "address": "0x0000000000000000000000000000000000000000",
+      "name": "Bazaars",
+      "symbol": "BZR",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/BazaarsBZR/BZR-token/main/logos/bzr-logo.png",
+      "tags": ["defi", "governance"]
+    },
+    {
+      "chainId": 25,
+      "address": "0x0000000000000000000000000000000000000000",
+      "name": "Bazaars",
+      "symbol": "BZR",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/BazaarsBZR/BZR-token/main/logos/bzr-logo.png",
+      "tags": ["defi", "governance"]
+    }
+  ]
+}
