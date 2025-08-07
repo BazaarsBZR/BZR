@@ -533,7 +533,7 @@ contract BZR is ERC20, ERC20Burnable, ReentrancyGuard, ERC165, IERC5267 {
         if (chainId == 43114) return "Avalanche";
         if (chainId == 324) return "zkSync Era";
         if (chainId == 25) return "Cronos";
-        return "Unsupported Chain - Further blockchains to follow after burn milestones";
+        return "Unsupported Chain";
     }
     
     /**
