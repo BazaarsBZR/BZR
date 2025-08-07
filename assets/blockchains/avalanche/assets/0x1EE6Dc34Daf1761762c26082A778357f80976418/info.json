@@ -1,1 +1,37 @@
-
+{
+    "name": "Bazaars",
+    "symbol": "BZR",
+    "type": "AVALANCHE",
+    "decimals": 18,
+    "description": "The first token implementing the revolutionary ORC-55 standard: Zero-Admin, Race-Conditionless, Contractually Final",
+    "website": "https://bazaars.io",
+    "explorer": "https://snowtrace.io/token/0xYOUR_AVALANCHE_CONTRACT_ADDRESS",
+    "status": "active",
+    "id": "0xYOUR_AVALANCHE_CONTRACT_ADDRESS",
+    "links": [
+        {
+            "name": "twitter",
+            "url": "https://twitter.com/BazaarsBZR"
+        },
+        {
+            "name": "telegram",
+            "url": "https://t.me/BazaarsBZR"
+        },
+        {
+            "name": "github",
+            "url": "https://github.com/BazaarsBZR"
+        },
+        {
+            "name": "coinmarketcap",
+            "url": "https://coinmarketcap.com/currencies/bazaars"
+        },
+        {
+            "name": "coingecko",
+            "url": "https://www.coingecko.com/en/coins/bazaars"
+        }
+    ],
+    "tags": [
+        "defi",
+        "governance"
+    ]
+}
