@@ -1126,11 +1126,11 @@
 	},
 	"sources": {
 		"BZR.sol": {
-			"keccak256": "0x7e3ea580ee8ac81a8544ec12216ae4af7f33c20ad70c8b5981432204fe87be9e",
+			"keccak256": "0xa446a9ee0197e4a00b69556b0437c326a8fd22116b93da8057cda6174b18ce8e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0de958c96b9a2946533d7dfdfa976059d6e4e15ff79c02342d8fe3d472e24638",
-				"dweb:/ipfs/QmSMrGrHKv526KZXRXqPx4Adox8918Bm64mcR1SXXBNn3M"
+				"bzz-raw://b368494573180ff3d2338a024adedaceaf5d3afaa7790cd40da220a89faec38c",
+				"dweb:/ipfs/QmYdveyjtX1QVCzAiwMccAFEnvEo8QDoVMZeAuEBdrVSwq"
 			]
 		},
 		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.9.0/contracts/security/ReentrancyGuard.sol": {
