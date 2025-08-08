@@ -1,16 +1,95 @@
-[
-  {
-    "inputs": [],
-    "name": "getContractMetadata",
-    "outputs": [
-      { "internalType": "string", "name": "tokenName", "type": "string" },
-      { "internalType": "string", "name": "versionString", "type": "string" },
-      { "internalType": "string", "name": "standard", "type": "string" },
-      { "internalType": "string", "name": "description", "type": "string" },
-      { "internalType": "bytes32", "name": "abiHash", "type": "bytes32" },
-      { "internalType": "string[]", "name": "features", "type": "string[]" }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  }
-]
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"getContractMetadata()": "72b44b52"
+		}
+	},
+	"abi": [
+		{
+			"inputs": [],
+			"name": "getContractMetadata",
+			"outputs": [
+				{
+					"internalType": "string",
+					"name": "tokenName",
+					"type": "string"
+				},
+				{
+					"internalType": "string",
+					"name": "versionString",
+					"type": "string"
+				},
+				{
+					"internalType": "string",
+					"name": "standard",
+					"type": "string"
+				},
+				{
+					"internalType": "string",
+					"name": "description",
+					"type": "string"
+				},
+				{
+					"internalType": "bytes32",
+					"name": "abiHash",
+					"type": "bytes32"
+				},
+				{
+					"internalType": "string[]",
+					"name": "features",
+					"type": "string[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		}
+	]
+}
