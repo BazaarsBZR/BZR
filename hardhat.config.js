@@ -1,124 +1,147 @@
 require("@nomicfoundation/hardhat-toolbox");
+require("@nomicfoundation/hardhat-verify");
 require("dotenv").config();
 
-// Ensure environment variables are set
 const PRIVATE_KEY = process.env.PRIVATE_KEY || "0x0000000000000000000000000000000000000000000000000000000000000000";
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || "";
-const INFURA_PROJECT_ID = process.env.INFURA_PROJECT_ID || "";
-const ALCHEMY_API_KEY = process.env.ALCHEMY_API_KEY || "";
+const BSCSCAN_API_KEY = process.env.BSCSCAN_API_KEY || "";
+const POLYGONSCAN_API_KEY = process.env.POLYGONSCAN_API_KEY || "";
+const ARBISCAN_API_KEY = process.env.ARBISCAN_API_KEY || "";
+const OPTIMISM_API_KEY = process.env.OPTIMISM_API_KEY || "";
+const BASESCAN_API_KEY = process.env.BASESCAN_API_KEY || "";
+const SNOWTRACE_API_KEY = process.env.SNOWTRACE_API_KEY || "";
+const MANTLESCAN_API_KEY = process.env.MANTLESCAN_API_KEY || "";
+const CRONOSCAN_API_KEY = process.env.CRONOSCAN_API_KEY || "";
 
-// You can use either Infura or Alchemy
-const ETHEREUM_RPC = `https://mainnet.infura.io/v3/${INFURA_PROJECT_ID}`;
-const SEPOLIA_RPC = `https://sepolia.infura.io/v3/${INFURA_PROJECT_ID}`;
-
-/** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: {
     version: "0.8.26",
     settings: {
       optimizer: {
         enabled: true,
-        runs: 200,
-      },
-      viaIR: true, // Enable IR-based optimization (reduces contract size)
-    },
+        runs: 200
+      }
+    }
   },
   
   networks: {
-    // Local development
-    hardhat: {
-      chainId: 31337,
-    },
-    localhost: {
-      url: "http://127.0.0.1:8545",
-    },
-    
-    // Testnets
-    sepolia: {
-      url: SEPOLIA_RPC,
-      chainId: 11155111,
-      accounts: [PRIVATE_KEY],
-    },
-    goerli: {
-      url: `https://goerli.infura.io/v3/${INFURA_PROJECT_ID}`,
-      chainId: 5,
-      accounts: [PRIVATE_KEY],
-    },
-    
-    // Mainnets - Your 10 supported chains
-    mainnet: {
-      url: ETHEREUM_RPC,
+    // Ethereum Mainnet
+    ethereum: {
+      url: `https://eth-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`,
       chainId: 1,
-      accounts: [PRIVATE_KEY],
-      gasPrice: "auto",
+      accounts: [PRIVATE_KEY]
     },
+    
+    // BNB Smart Chain
     bsc: {
       url: "https://bsc-dataseed.binance.org/",
       chainId: 56,
-      accounts: [PRIVATE_KEY],
+      accounts: [PRIVATE_KEY]
     },
+    
+    // Polygon
     polygon: {
-      url: `https://polygon-mainnet.infura.io/v3/${INFURA_PROJECT_ID}`,
+      url: "https://polygon-rpc.com/",
       chainId: 137,
       accounts: [PRIVATE_KEY],
-      gasPrice: 50000000000, // 50 gwei
+      gasPrice: 50000000000 // 50 gwei
     },
+    
+    // Arbitrum One
     arbitrum: {
-      url: `https://arbitrum-mainnet.infura.io/v3/${INFURA_PROJECT_ID}`,
+      url: "https://arb1.arbitrum.io/rpc",
       chainId: 42161,
-      accounts: [PRIVATE_KEY],
+      accounts: [PRIVATE_KEY]
     },
+    
+    // Optimism
     optimism: {
-      url: `https://optimism-mainnet.infura.io/v3/${INFURA_PROJECT_ID}`,
+      url: "https://mainnet.optimism.io",
       chainId: 10,
-      accounts: [PRIVATE_KEY],
+      accounts: [PRIVATE_KEY]
     },
-    avalanche: {
-      url: "https://api.avax.network/ext/bc/C/rpc",
-      chainId: 43114,
-      accounts: [PRIVATE_KEY],
-    },
+    
+    // Base
     base: {
       url: "https://mainnet.base.org",
       chainId: 8453,
       accounts: [PRIVATE_KEY],
+      gasPrice: 1000000000 // 1 gwei
     },
-    linea: {
-      url: `https://linea-mainnet.infura.io/v3/${INFURA_PROJECT_ID}`,
-      chainId: 59144,
+    
+    // Avalanche
+    avalanche: {
+      url: "https://api.avax.network/ext/bc/C/rpc",
+      chainId: 43114,
+      accounts: [PRIVATE_KEY]
+    },
+    
+    // zkSync Era
+    zksync: {
+      url: "https://mainnet.era.zksync.io",
+      chainId: 324,
       accounts: [PRIVATE_KEY],
+      zksync: true,
+      ethNetwork: "mainnet",
+      verifyURL: "https://zksync2-mainnet-explorer.zksync.io/contract_verification"
     },
-    scroll: {
-      url: "https://rpc.scroll.io",
-      chainId: 534352,
-      accounts: [PRIVATE_KEY],
-    },
+    
+    // Mantle
     mantle: {
       url: "https://rpc.mantle.xyz",
       chainId: 5000,
-      accounts: [PRIVATE_KEY],
+      accounts: [PRIVATE_KEY]
     },
+    
+    // Cronos
+    cronos: {
+      url: "https://evm.cronos.org",
+      chainId: 25,
+      accounts: [PRIVATE_KEY]
+    },
+    
+    // Local development
+    hardhat: {
+      chainId: 31337
+    },
+    localhost: {
+      chainId: 31337,
+      url: "http://127.0.0.1:8545"
+    }
   },
   
-  // Etherscan verification
   etherscan: {
     apiKey: {
-      // Mainnets
+      // Ethereum
       mainnet: ETHERSCAN_API_KEY,
-      bsc: process.env.BSCSCAN_API_KEY || "",
-      polygon: process.env.POLYGONSCAN_API_KEY || "",
-      arbitrumOne: process.env.ARBISCAN_API_KEY || "",
-      optimisticEthereum: process.env.OPTIMISM_API_KEY || "",
-      avalanche: process.env.SNOWTRACE_API_KEY || "",
-      base: process.env.BASESCAN_API_KEY || "",
-      linea: process.env.LINEASCAN_API_KEY || "",
-      scroll: process.env.SCROLLSCAN_API_KEY || "",
-      mantle: process.env.MANTLESCAN_API_KEY || "",
       
-      // Testnets
-      sepolia: ETHERSCAN_API_KEY,
-      goerli: ETHERSCAN_API_KEY,
+      // BNB Smart Chain
+      bsc: BSCSCAN_API_KEY,
+      
+      // Polygon
+      polygon: POLYGONSCAN_API_KEY,
+      
+      // Arbitrum
+      arbitrumOne: ARBISCAN_API_KEY,
+      
+      // Optimism
+      optimisticEthereum: OPTIMISM_API_KEY,
+      
+      // Base
+      base: BASESCAN_API_KEY,
+      
+      // Avalanche
+      avalanche: SNOWTRACE_API_KEY,
+      
+      // zkSync - handled separately
+      
+      // Mantle
+      mantle: MANTLESCAN_API_KEY,
+      
+      // Cronos
+      cronos: CRONOSCAN_API_KEY
     },
+    
     customChains: [
       {
         network: "base",
@@ -129,59 +152,39 @@ module.exports = {
         }
       },
       {
-        network: "linea",
-        chainId: 59144,
-        urls: {
-          apiURL: "https://api.lineascan.build/api",
-          browserURL: "https://lineascan.build"
-        }
-      },
-      {
-        network: "scroll",
-        chainId: 534352,
-        urls: {
-          apiURL: "https://api.scrollscan.com/api",
-          browserURL: "https://scrollscan.com"
-        }
-      },
-      {
         network: "mantle",
         chainId: 5000,
         urls: {
-          apiURL: "https://explorer.mantle.xyz/api",
-          browserURL: "https://explorer.mantle.xyz"
+          apiURL: "https://api.mantlescan.xyz/api",
+          browserURL: "https://mantlescan.xyz"
+        }
+      },
+      {
+        network: "cronos",
+        chainId: 25,
+        urls: {
+          apiURL: "https://api.cronoscan.com/api",
+          browserURL: "https://cronoscan.com"
         }
       }
     ]
   },
   
-  // Gas reporter configuration
-  gasReporter: {
-    enabled: process.env.REPORT_GAS === "true",
-    currency: "USD",
-    coinmarketcap: process.env.COINMARKETCAP_API_KEY,
-    excludeContracts: [],
-    src: "./contracts",
+  // For zkSync (if using hardhat-zksync plugins)
+  zksolc: {
+    version: "1.3.13",
+    compilerSource: "binary",
+    settings: {}
   },
   
-  // Contract sizer
-  contractSizer: {
-    alphaSort: true,
-    disambiguatePaths: false,
-    runOnCompile: true,
-    strict: true,
-  },
-  
-  // Paths
   paths: {
     sources: "./contracts",
     tests: "./test",
     cache: "./cache",
-    artifacts: "./artifacts",
+    artifacts: "./artifacts"
   },
   
-  // Mocha test configuration
   mocha: {
-    timeout: 40000,
-  },
+    timeout: 200000
+  }
 };
