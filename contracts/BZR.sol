@@ -1,11 +1,5 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.26;
-
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.9.0/contracts/token/ERC20/ERC20.sol";
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.9.0/contracts/token/ERC20/extensions/ERC20Burnable.sol";
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.9.0/contracts/security/ReentrancyGuard.sol";
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.9.0/contracts/utils/introspection/ERC165.sol";
-
 /**
  * @title Bazaars (BZR) – ORC-55 Standard
  * @notice Production-ready deflationary token with military-grade security
