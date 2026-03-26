@@ -12,7 +12,7 @@ const DEPLOYMENT_INFO = {
     name: "Bazaars",
     symbol: "BZR",
     decimals: 18,
-    totalSupplyPerChain: "55555555555555555555555555", // 55,555,555.555555555555555555
+    totalSupplyPerChain: "55555555555555555555555555",
     contractAddress: "0x85Cb098bdcD3Ca929d2cD18Fc7A2669fF0362242"
   },
   
@@ -79,28 +79,19 @@ const DEPLOYMENT_INFO = {
       rpc: "https://mainnet.era.zksync.io",
       explorer: "https://explorer.zksync.io",
       deployed: true,
-      verified: false, // Verification pending
+      verified: false,
       txHash: "0x050dbeb3bf27972caa62653d1aa8d6552a63672c084d9d26d0c32ed842bbb19d"
     },
-    mantle: {
-      chainId: 5000,
-      name: "Mantle",
-      rpc: "https://rpc.mantle.xyz",
-      explorer: "https://explorer.mantle.xyz",
+    linea: {
+      chainId: 59144,
+      name: "Linea",
+      rpc: "https://rpc.linea.build",
+      explorer: "https://lineascan.build",
       deployed: true,
-      txHash: "0x20e321dfa0027dd7758f3dc0197f2c0a6f6c2442b559bb601c7d1ad48aa43670"
-    },
-    cronos: {
-      chainId: 25,
-      name: "Cronos",
-      rpc: "https://evm.cronos.org",
-      explorer: "https://cronoscan.com",
-      deployed: true,
-      txHash: "0x4bfa8b09d44311ab33a52db5b019262af061e2dab181572852da489b38b3e49c"
+      txHash: "0x325d0c947e388cc18f0e59c16666332ad6fb34b998c69cc5911b3a93743f8d46"
     }
   },
   
-  // Liquidity pairs
   liquidity: {
     ethereum: {
       dex: "Uniswap V3",
@@ -114,7 +105,6 @@ const DEPLOYMENT_INFO = {
       poolAddress: "0x...",
       addedLiquidity: true
     }
-    // Add other chains as you add liquidity
   }
 };
 
@@ -167,7 +157,7 @@ function generateTokenList() {
   };
 }
 
-// Export for use
+// Export
 module.exports = {
   DEPLOYMENT_INFO,
   getExplorerLink,
