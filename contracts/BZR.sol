@@ -1,5 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.26;
+
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.9.0/contracts/token/ERC20/ERC20.sol";
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.9.0/contracts/token/ERC20/extensions/ERC20Burnable.sol";
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.9.0/contracts/security/ReentrancyGuard.sol";
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.9.0/contracts/utils/introspection/ERC165.sol";
+
 /**
  * @title Bazaars (BZR) – ORC-55 Standard
  * @notice Production-ready deflationary token with military-grade security
@@ -514,19 +520,18 @@ contract BZR is ERC20, ERC20Burnable, ReentrancyGuard, ERC165, IERC5267 {
      * @notice Get the canonical chain name for official BZR deployments
      * @param chainId Chain ID to get name for
      * @return Chain name string
-     * @dev Supports all 10 official BZR deployment chains
+     * @dev Supports all official BZR deployment chains
      */
     function getChainName(uint256 chainId) external pure returns (string memory) {
         if (chainId == 1) return "Ethereum";
         if (chainId == 56) return "BNB Chain";
         if (chainId == 137) return "Polygon";
-        if (chainId == 5000) return "Mantle";
+        if (chainId == 59144) return "Linea";
         if (chainId == 8453) return "Base";
         if (chainId == 42161) return "Arbitrum";
         if (chainId == 10) return "Optimism";
         if (chainId == 43114) return "Avalanche";
         if (chainId == 324) return "zkSync Era";
-        if (chainId == 25) return "Cronos";
         return "Unsupported Chain";
     }
     
