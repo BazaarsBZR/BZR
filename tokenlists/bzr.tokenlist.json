@@ -79,15 +79,6 @@
       "tags": ["defi", "governance"]
     },
     {
-      "chainId": 5000,
-      "address": "0x0000000000000000000000000000000000000000",
-      "name": "Bazaars",
-      "symbol": "BZR",
-      "decimals": 18,
-      "logoURI": "https://raw.githubusercontent.com/BazaarsBZR/BZR-token/main/logos/bzr-logo.png",
-      "tags": ["defi", "governance"]
-    },
-    {
       "chainId": 324,
       "address": "0x0000000000000000000000000000000000000000",
       "name": "Bazaars",
@@ -97,7 +88,7 @@
       "tags": ["defi", "governance"]
     },
     {
-      "chainId": 25,
+      "chainId": 59144,
       "address": "0x0000000000000000000000000000000000000000",
       "name": "Bazaars",
       "symbol": "BZR",
