@@ -8,7 +8,7 @@
 // This is a flattened version combining all OpenZeppelin dependencies.
 // For verification, you may need to use the original version with imports.
 
-pragma solidity 0.8.26;
+pragma solidity ^0.8.26;
 
 // OpenZeppelin Contracts (last updated v4.9.0) (utils/Context.sol)
 abstract contract Context {
@@ -739,13 +739,12 @@ contract BZR is ERC20, ERC20Burnable, ReentrancyGuard, ERC165, IERC5267 {
         if (chainId == 1) return "Ethereum";
         if (chainId == 56) return "BNB Chain";
         if (chainId == 137) return "Polygon";
-        if (chainId == 5000) return "Mantle";
+        if (chainId == 59144) return "Linea";
         if (chainId == 8453) return "Base";
         if (chainId == 42161) return "Arbitrum";
         if (chainId == 10) return "Optimism";
         if (chainId == 43114) return "Avalanche";
         if (chainId == 324) return "zkSync Era";
-        if (chainId == 25) return "Cronos";
         return "Unsupported Chain";
     }
     
